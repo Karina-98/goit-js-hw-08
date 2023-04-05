@@ -33,10 +33,10 @@ function onEmailWrite(e) {
 
 function onTexareaReset() { 
    
-    const sevMessage = lokalStorage.getItem('message');
-    const sevEmail = lokalStorage.getItem('email');
-    if (savMessage) {
-        textarea.value = savMessage
+    const sevMessage = localStorage.getItem('message');
+    const sevEmail = localStorage.getItem('email'); 
+    if (sevMessage) {
+        textarea.value = sevMessage
     } if (sevEmail) { 
         email.value = sevEmail;
     }
