@@ -8,20 +8,22 @@ import { _throttle } from "lodash.throttle";
 
 
 
-player.on('timeUpdate', _trottle(onPlay, 500));
+player.on('timeupdate', trottle(onPlay, 1000) );
 
 function onPlay(event) {
-    lokalStorege.setItem('currentTimeVideo', event.seconds);
+    lokalStorege.setItem(currentTimeVideo, event.seconds);
 
 }
 setCurrentTime();
 
-function setCurrentTime() { 
-    if (!localStorage.getItem(currentTimeVideo)){
-        return;
-}
-    player.setCurrentTime(localStorage.getItem('currentTimeVideo'));
-}
+// function setCurrentTime() { 
+//     if (!localStorage.getItem(currentTimeVideo)){
+//         return;
+// }
+//     player.setCurrentTime(localStorage.getItem('currentTimeVideo'));
+// }
+
+// player.setCurrentTime(localStorage.getItem(currentTimeVideo) || 0);
 
 
 
