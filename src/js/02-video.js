@@ -27,6 +27,3 @@ setCurrentTime();
 
 
 
-player.on('play', onPlay);
-    
-
