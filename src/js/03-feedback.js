@@ -13,6 +13,8 @@ onTexareaReset();
 
 function onFormWrite(e) { 
     e.preventDefault();
+    console.log('Email: ', email.value);
+    console.log('Message: ', textarea.value)
     e.currentTarget.reset();
     localStorage.removeItem('email');
     localStorage.removeItem('message');
@@ -31,6 +33,7 @@ function onEmailWrite(e) {
     const email = e.target.value;
     
     localStorage.setItem('email', email);
+    
  }
 
 function onTexareaReset() { 
@@ -43,3 +46,4 @@ function onTexareaReset() {
         email.value = sevEmail;
     }
 }
+
